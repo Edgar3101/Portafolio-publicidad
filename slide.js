@@ -20,23 +20,28 @@ function show_3_images(){
     let varios_divs= document.querySelectorAll('.slide');
     varios_divs.forEach(function(element, index){
         if(index>2){
-            element.style.display= "none"
+            element.style.display= "none";
         }
     })
 }
 create_new_images()
 show_3_images()
-function my_left_button(){
+function get_image_source(number){
     let quantity_elements = document.querySelectorAll('.image-work');
-    var nombres = quantity_elements[0].src.split("/");
-    for(let j = nombres.length - 1; j >=0 ; j--){
-        console.log(j)
-    }
-    
+    var nombres = quantity_elements[number].src.split("/");
+    let reversed = nombres.reverse()
+    image_name= (reversed[1] + "/" + reversed[0]);
+    return image_name
 
-    if(quantity_elements[0].src==image_array[0]){
-        console.log("es igual")
-    }
+}
+function my_left_button(){
+    let quantity_elements= document.querySelectorAll('.slide');
+    quantity_elements.forEach(function(element, index){
+        
+    })
+
+
+
 }
 let button_left= document.querySelector('#icon-left');
 
